@@ -1,0 +1,7 @@
+.vagrant
+Vagrantfile
+.git
+.env
+.env.test
+log/*
+tmp/*
