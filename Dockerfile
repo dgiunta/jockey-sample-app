@@ -7,7 +7,13 @@ ADD Gemfile.lock /app/Gemfile.lock
 # changing of the assets should bust the build cache
 ADD app/assets /app/app/assets
 
-RUN /build/builder
-ADD . /app
+RUN mkdir -p /app
 WORKDIR /app
+
+COPY Gemfile /app/
+COPY Gemfile.loc /app/
+RUN bundle install
+
+ADD . /app
+
 CMD ["/start", "web"]
