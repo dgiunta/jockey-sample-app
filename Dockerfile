@@ -8,4 +8,5 @@ ADD app/assets /app/app/assets
 
 RUN /build/builder
 ADD . /app
+WORKDIR /app
 CMD ["/start", "web"]
