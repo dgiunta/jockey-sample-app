@@ -16,4 +16,4 @@ RUN bundle install
 
 ADD . /app
 
-CMD ["/start", "web"]
+CMD ["bundle", "exec", "puma", "-C", "./config/puma.rb"]
